@@ -6,12 +6,16 @@ resource "aws_api_gateway_deployment" "test_api" {
       aws_api_gateway_rest_api.test_api.body,
 
       aws_api_gateway_resource.test_api.id,
-      aws_api_gateway_method.test_api.id,
-      aws_api_gateway_integration.test_api.id,
+#      aws_api_gateway_method.test_api.id,
+#      aws_api_gateway_integration.test_api.id,
 
-#      aws_api_gateway_resource.west.id,
-#      aws_api_gateway_method.west.id,
-#      aws_api_gateway_integration.west.id,
+      aws_api_gateway_resource.west.id,
+      aws_api_gateway_method.west.id,
+      aws_api_gateway_integration.west.id,
+
+      aws_api_gateway_resource.test_proxy.id,
+      aws_api_gateway_method.test_proxy.id,
+      aws_api_gateway_integration.test_proxy.id,
     ]))
   }
 
